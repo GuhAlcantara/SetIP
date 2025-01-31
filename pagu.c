@@ -9,8 +9,8 @@ int opcao;
 printf("Bem vindos(as)\n");
 printf("-----------------\n");
 printf("Escolha a opcao que deseja:\n");
-printf("1. Setar IP Estatico (USAR NA REDE *PAGU*)\n");
-printf("2. Resetar IP Dinamico (usar FORA do Pagu)\n");
+printf("1. Setar IP Estatico (USAR NA REDE *x*)\n"); //x = Nome da Rede do trabalho
+printf("2. Resetar IP Dinamico (usar FORA do Trabalho)\n");
 printf("3. Saiba Mais.\n");
 printf("4. Sair.\n");
 printf("Digite: ");
@@ -26,6 +26,8 @@ case 1 :
             //name="Nome da Conexão" static [IP] [Máscara de Sub-rede] [Gateway Padrão]
             // Foi escolhido xxx.xxx.x.120 pela cliente
 system("netsh interface ip set address name=Wi-Fi static 192.168.2.120 255.255.255.0 192.168.2.1");
+
+        //Resultado para a cliente
 printf("interface = Wi-Fi\n");      // Nome da interface (verifique com "netsh interface show interface")
 printf("ip = 192.168.2.120\n");        // Endereço IP configurado
 printf("Netmask = 255.255.255.0\n");   // Máscara de rede configurado
@@ -44,6 +46,7 @@ case 2 :
 system("netsh interface ip set address name=Wi-Fi dhcp"); //Volta o IP para dinamico
 system("netsh interface ip set dns name=Wi-fi dhcp"); // Volta o DNS para dinamico
 
+        // Resultado para a cliente
 printf("IP dinamico configurado com sucesso!\n\n");
 
     break;
