@@ -8,6 +8,8 @@ int opcao;
 
 printf("Bem vindos(as)\n");
 printf("-----------------\n");
+
+do{
 printf("Escolha a opcao que deseja:\n");
 printf("1. Setar IP Estatico (USAR NA REDE *x*)\n"); //x = Nome da Rede do trabalho
 printf("2. Resetar IP Dinamico (usar FORA do Trabalho)\n");
@@ -61,7 +63,8 @@ printf("IP dinamico configurado com sucesso!\n\n");
     break;
 
 case 4 :
-//system("exit");
+    printf("Saindo...");
+    
     break;
 
 default:
@@ -69,11 +72,12 @@ default:
 printf("Opcao invalida , Tente novamente\n\n");
     break;
 }
+} while (opcao !=4);
 
 
 
 
 
-system("pause");
+
     return 0;
 }
